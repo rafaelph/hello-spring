@@ -1,6 +1,5 @@
-package com.rafaelkarlo.main;
+package com.rafaelkarlo.profiles;
 
-import com.rafaelkarlo.configuration.ProfileConfig;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.test.context.ActiveProfiles;

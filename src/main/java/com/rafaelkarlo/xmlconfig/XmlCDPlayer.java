@@ -1,5 +1,7 @@
-package com.rafaelkarlo.objects;
+package com.rafaelkarlo.xmlconfig;
 
+import com.rafaelkarlo.annotationconfig.CompactDisc;
+import com.rafaelkarlo.annotationconfig.MediaPlayer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 

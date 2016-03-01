@@ -1,6 +1,5 @@
-package com.rafaelkarlo.configuration;
+package com.rafaelkarlo.profiles;
 
-import com.rafaelkarlo.objects.*;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Profile;

@@ -1,9 +1,5 @@
-package com.rafaelkarlo.main;
+package com.rafaelkarlo.annotationconfig;
 
-import com.rafaelkarlo.objects.CompactDisc;
-import com.rafaelkarlo.objects.MediaPlayer;
-import com.rafaelkarlo.objects.SgtPeppers;
-import com.rafaelkarlo.objects.XmlCompactDisc;
 import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;
@@ -14,14 +10,15 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.Matchers.containsInAnyOrder;
 import static org.hamcrest.Matchers.containsString;
 import static org.hamcrest.Matchers.instanceOf;
 import static org.hamcrest.core.Is.is;
 import static org.hamcrest.core.IsNull.notNullValue;
 
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(locations = {"/springconfig.xml"})
-public class XmlBeanTest {
+@ContextConfiguration(classes = SgtPeppersConfig.class)
+public class SgtPepperTest {
 
     @Rule
     public final SystemOutRule log = new SystemOutRule();
@@ -40,13 +37,13 @@ public class XmlBeanTest {
     @Test
     public void compactDiscShouldNotBeNull() {
         assertThat(compactDisc, is(notNullValue()));
-        assertThat(compactDisc, is(instanceOf(XmlCompactDisc.class)));
+        assertThat(compactDisc, is(instanceOf(SgtPeppers.class)));
     }
 
     @Test
     public void mediaPlayerShouldPlayACompactDisc() {
         cdPlayer.play();
-        assertThat(log.getLog(), containsString("Playing XML Rock by XML Artist"));
+        assertThat(log.getLog(), containsString("Playing Song of Sgt. Peppers by Sgt. Peppers"));
     }
 
 }

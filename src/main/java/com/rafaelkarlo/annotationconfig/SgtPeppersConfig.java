@@ -1,9 +1,9 @@
-package com.rafaelkarlo.configuration;
+package com.rafaelkarlo.annotationconfig;
 
-import com.rafaelkarlo.objects.CDPlayer;
-import com.rafaelkarlo.objects.CompactDisc;
-import com.rafaelkarlo.objects.MediaPlayer;
-import com.rafaelkarlo.objects.SgtPeppers;
+import com.rafaelkarlo.annotationconfig.CDPlayer;
+import com.rafaelkarlo.annotationconfig.CompactDisc;
+import com.rafaelkarlo.annotationconfig.MediaPlayer;
+import com.rafaelkarlo.annotationconfig.SgtPeppers;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 

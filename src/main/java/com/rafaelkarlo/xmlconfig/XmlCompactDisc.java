@@ -1,4 +1,6 @@
-package com.rafaelkarlo.objects;
+package com.rafaelkarlo.xmlconfig;
+
+import com.rafaelkarlo.annotationconfig.CompactDisc;
 
 public class XmlCompactDisc implements CompactDisc {
 

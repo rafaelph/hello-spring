@@ -1,4 +1,4 @@
-package com.rafaelkarlo.objects;
+package com.rafaelkarlo.annotationconfig;
 
 public interface MediaPlayer {
     void play();

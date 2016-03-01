@@ -1,9 +1,9 @@
 package com.rafaelkarlo.main;
 
-import com.rafaelkarlo.configuration.CDPlayerConfig;
-import com.rafaelkarlo.configuration.ProfileConfig;
-import com.rafaelkarlo.objects.MediaPlayer;
-import com.rafaelkarlo.objects.ProfileBean;
+import com.rafaelkarlo.annotationconfig.CDPlayerConfig;
+import com.rafaelkarlo.profiles.ProfileConfig;
+import com.rafaelkarlo.annotationconfig.MediaPlayer;
+import com.rafaelkarlo.profiles.ProfileBean;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;

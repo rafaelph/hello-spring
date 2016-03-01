@@ -1,4 +1,4 @@
-package com.rafaelkarlo.objects;
+package com.rafaelkarlo.annotationconfig;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;

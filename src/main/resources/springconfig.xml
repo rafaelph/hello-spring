@@ -4,8 +4,8 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
        http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="compactDisc" class="com.rafaelkarlo.objects.XmlCompactDisc" />
-    <bean id="cdPlayer" class="com.rafaelkarlo.objects.XmlCDPlayer">
+    <bean id="compactDisc" class="com.rafaelkarlo.xmlconfig.XmlCompactDisc" />
+    <bean id="cdPlayer" class="com.rafaelkarlo.xmlconfig.XmlCDPlayer">
         <constructor-arg ref="compactDisc" />
     </bean>
 </beans>

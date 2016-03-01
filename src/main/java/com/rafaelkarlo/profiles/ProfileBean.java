@@ -1,4 +1,4 @@
-package com.rafaelkarlo.objects;
+package com.rafaelkarlo.profiles;
 
 public interface ProfileBean {
 

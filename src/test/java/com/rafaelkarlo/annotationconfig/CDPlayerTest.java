@@ -1,7 +1,5 @@
-package com.rafaelkarlo.main;
+package com.rafaelkarlo.annotationconfig;
 
-import com.rafaelkarlo.configuration.ProfileConfig;
-import com.rafaelkarlo.objects.ProfileBean;
 import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;
@@ -12,18 +10,22 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.Matchers.containsString;
 import static org.hamcrest.core.Is.is;
 import static org.hamcrest.core.IsNull.notNullValue;
 
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(classes = { ProfileConfig.class } )
-public abstract class ProfileTest {
+@ContextConfiguration(classes = CDPlayerConfig.class)
+public class CDPlayerTest {
 
     @Rule
     public final SystemOutRule log = new SystemOutRule();
 
     @Autowired
-    protected ProfileBean profileBean;
+    private CompactDisc compactDisc;
+
+    @Autowired
+    private MediaPlayer cdPlayer;
 
     @Before
     public void setupLogger() {
@@ -31,9 +33,14 @@ public abstract class ProfileTest {
     }
 
     @Test
-    public void profileBeanShouldNotBeNull() {
-        assertThat(profileBean, is(notNullValue()));
+    public void compactDiscShouldNotBeNull() {
+        assertThat(compactDisc, is(notNullValue()));
     }
 
+    @Test
+    public void mediaPlayerShouldPlayACompactDisc() {
+        cdPlayer.play();
+        assertThat(log.getLog(), containsString("Playing One by Metallica"));
+    }
 
 }
