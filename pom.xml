@@ -10,6 +10,10 @@
     <name>hello-spring</name>
     <url>http://maven.apache.org</url>
 
+    <properties>
+        <activeProfile>prod</activeProfile>
+    </properties>
+
     <dependencies>
         <dependency>
             <groupId>junit</groupId>
@@ -38,5 +42,24 @@
             <version>2.0.0.0</version>
         </dependency>
     </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>exec-maven-plugin</artifactId>
+                <version>1.4.0</version>
+                <configuration>
+                    <mainClass>com.rafaelkarlo.main.App</mainClass>
+                    <systemProperties>
+                        <systemProperty>
+                            <key>spring.profiles.active</key>
+                            <value>${activeProfile}</value>
+                        </systemProperty>
+                    </systemProperties>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 
 </project>
